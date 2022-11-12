@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 80px;
+}
+
+.logo{
+    width: 35px;
+    margin-right: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.search{
+    cursor: pointer;
+}
+
+.landing{
+    height: calc( 100vh - 80px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.landing::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.links{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 60%;
+    z-index: 999;
+}
+
+
+
+.button{
+    background-color: #222;
+    inset: 0px;
+    position: relative;
+    width: 150px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.line{
+    position: absolute;
+    background-color: #212529;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.line::after{
+    content: "";
+    width: 280px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 88;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.line::before{
+    content: "";
+    background-color: #333;
+    inset: 4px;
+    position: absolute;
+    z-index: 5;
+    border-radius: 5px;
+    z-index: 99;
+}
+
+.button a{
+    position: absolute;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 0px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    transition: 0.5s;
+    font-size: 24px;
+    z-index: 10000;
+}
+
+
+.button:hover{
+    transform: scale(1.2,1.2);
+}
+
+#sports a:hover{
+    color: #45f3ff;
+    background-color: #222;
+}
+
+#business a:hover{
+    color: #f0c32d;
+    background-color: #222;
+}
+
+#tech a:hover{
+    color: #1486de;
+    background-color: #222;
+}
+
+#health a:hover{
+    color: #ff3c7b;
+    background-color: #222;
+}
+
+.button:hover .sports::after{
+    background: linear-gradient(transparent, #45f3ff, #45f3ff, transparent);
+    animation: animate 3s infinite linear;
+}
+
+.button:hover .business::after{
+    background: linear-gradient(transparent, #f0c32d, #f0c32d, transparent);
+    animation: animate 3s infinite linear;
+}
+
+.button:hover .tech::after{
+    background: linear-gradient(transparent, #1486de, #1486de, transparent);
+    animation: animate 3s infinite linear;
+}
+
+.button:hover .health::after{
+    background: linear-gradient(transparent, #ff3c7b, #ff3c7b, transparent);
+    animation: animate 3s infinite linear;
+}
+
+.slide{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    width: 80%;
+    height: 55px;
+    background-color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    color: black;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pass{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .cov{
+    position: absolute;
+    animation: animateSlide 175s linear infinite;
+}
+
+.slide .cov:hover{
+    animation-play-state: paused;
+}
+
+@keyframes animateSlide {
+    0%{
+        right: 100%;
+    }
+
+    100%{
+        right: -1300%;
+    }
+}

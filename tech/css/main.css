@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+nav{
+    position: sticky;
+    height: 80px;
+    z-index: 88;
+}
+
+.logo{
+    width: 25px;
+    margin-right: 15px;
+    background-color: white;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.text{
+    color: white;
+    text-decoration: none;
+}
+
+.text:hover{
+    color: #1486de;
+    
+}
+
+.add{
+    margin: 0 auto;
+    width: fit-content;
+    border-bottom: 3px solid #1486de;
+}
+
+.search{
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.slide{
+    height: 55px;
+    background-color: black;
+    white-space: nowrap;
+    position: sticky;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.slide .cov{
+    position: absolute;
+    animation: animate 175s linear infinite;
+}
+
+.slide .cov:hover{
+    animation-play-state: paused;
+}
+
+@keyframes animate {
+    0%{
+        right: 100%;
+    }
+
+    100%{
+        right: -1300%;
+    }
+}
+
+.sep{
+    background-color: #aaa;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.image img{
+    height: 400px;
+}
+
+.desc{
+    text-align: end;
+    height: 180px;
+}
+
+.more{
+    position: relative;
+}
+
+.more .cont{
+    background-color: #1486de;
+    padding: 10px 20px;
+    width: fit-content;
+    position: absolute;
+    border-radius: 4px;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.more .button{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+    color: white;
+}
+
+.more .cont::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    border-radius: 4px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.more .cont:hover::before{
+    left: 0;
+}
+
+.up{
+    background-color: #1486de;
+    width: 45px;
+    height: 45px;
+    bottom: 25px;
+    right: 25px;
+    cursor: pointer;
+    transition: 0.8s;
+    display: none;
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
